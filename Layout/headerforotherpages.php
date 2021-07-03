@@ -32,11 +32,10 @@
 			<a href="javascript:void(0)" class="closebtn" onclick="closeSignup()">&times;</a>
 				<div class="user-form-container">
 					<div style="text-align: center; padding-top: 100px;" class="user-form-title">SIGN UP</div>
-					<form class="user-login" method="POST" action="index.php?module=common&action=register">
+					<form class="user-login" action="index.php?module=common&action=register" method="POST">
 						<input type="text" name="username" class="text-box" placeholder="Username*" required="true">
 						<input type="email" name="email" class="text-box" placeholder="Email address*" required="true">
 						<input type="number" name="phone" class="text-box" placeholder="Phone*" required="true">
-						<input type="text" name="address" class="text-box" placeholder="Address*" required="true">
 						<input type="password" name="password" class="text-box" placeholder="Password*" required="true">
 						<input type="password" name="passwordconfirm" class="text-box" placeholder="Confirm password*" required="true">
 						<div style="display: flex;">
@@ -48,7 +47,7 @@
 				</div>
 		</div>
 		<!-- ===================== Sidebar content (search bar) ====================== -->
-        <div id="searchBar" class="search-bar">
+      <div id="searchBar" class="search-bar">
             <div class="overlay-content">
                 <form>
                 	  <input type="hidden" name="module" value="products">
@@ -63,11 +62,8 @@
 
 <!-- ======================== Navigation bar ======================= -->		
 
-		<!-- ======================== Navigation bar ======================= -->		
-
 		<div class="header">
-			<div class="header-bg-image">
-				<div class="header-container" id="header-container">
+				<div class="header-container-solid">
 					<div class="header-left">
 						<a href="index.php"><img class="logo" src="../Images/Front/Thumbnail/site_logo.png"></a>
 					</div>
@@ -164,5 +160,4 @@
 						<a href="index.php?module=orders&action=cart"><img src="../Images/Front/Icons/shopping-bag.svg"></a>
   					</div>
 				</div>
-			</div>
 		</div>

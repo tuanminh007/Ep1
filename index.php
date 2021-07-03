@@ -1,5 +1,4 @@
 <?php
-
 //DIEU HUONG theo MODULE va ACTION
 $module = $action ='';
 if(isset($_GET['module'])){
@@ -11,8 +10,8 @@ if(isset($_GET['action'])){
 }
 
 if($module == "" || $action == ""){
-	$module = "Common";
-	$action = "login";
+	$module = "home";
+	$action = "home";
 }
 //Dan den file
 $path = "Module/$module/$action.php";

@@ -9,61 +9,49 @@
 <body>
 
 <!-- ================== Sidebar content (Login form) ================= -->
-		<div id="mySidenav" class="sidenav">
-		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<div id="loggedSidenav" class="sidenav">
+		  <a href="javascript:void(0)" class="closebtn" onclick="closeNavlogged()">&times;</a>
 				<div class="user-form-container">
-					<div style="text-align: center; padding-top: 100px;" class="user-form-title">SIGN IN</div>
-					<form class="user-login" action="index.php?module=common&action=login" method="POST">
-						<input type="email" name="email" class="text-box" placeholder="Email address*" required="true">
-						<input type="password" name="password" class="text-box" placeholder="Password*" required="true">
+					<div style="text-align: center; padding-top: 100px;" class="user-form-title"><?php echo $_SESSION['user']['name'] ?></div>
+						<p class="user-phone"><img src="../Images/Front/Icons/phone.svg"><?php echo $_SESSION['user']['phone'] ?></p>
+						<p class="user-address"><img src="../Images/Front/Icons/map-pin.svg"><?php echo $_SESSION['user']['address'] ?></p>
 						<div style="display: flex;">
-							<button type="submit" name="signin" class="signin-btn" onclick="">SIGN IN</button>
-							<!-- <a href="#forgotpass">Forgot password?</a> -->
+							<button type="submit" name="logout" class="logout-btn" onclick=""><a href="index.php?module=common&action=logout">LOG OUT</a></button>
+							<p name="changepass" class="change-password-link"  onclick="passChangenav()">Change password</a></p>
 						</div>
-						
-					</form>
-					<div class="user-form-suggest">
-						<div class="user-form-title">NEW TO RYANA CALENDAR?</div>
-						<button name="signup" class="suggest-btn"  onclick="signUpnav()">SIGN UP NOW</button>
-					</div>
 				</div>
 		</div>
-		<div id="signUp" class="sidenav">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeSignup()">&times;</a>
+		<div id="passChange" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closePassnav()">&times;</a>
 				<div class="user-form-container">
-					<div style="text-align: center; padding-top: 100px;" class="user-form-title">SIGN UP</div>
-					<form class="user-login" method="POST" action="index.php?module=common&action=register">
-						<input type="text" name="username" class="text-box" placeholder="Username*" required="true">
-						<input type="email" name="email" class="text-box" placeholder="Email address*" required="true">
-						<input type="number" name="phone" class="text-box" placeholder="Phone*" required="true">
-						<input type="text" name="address" class="text-box" placeholder="Address*" required="true">
-						<input type="password" name="password" class="text-box" placeholder="Password*" required="true">
-						<input type="password" name="passwordconfirm" class="text-box" placeholder="Confirm password*" required="true">
-						<div style="display: flex;">
-							<button type="submit" name="signin" class="create-btn" onclick="">CREATE ACCOUNT</button>
-							<a href="#backtosignin" onclick="backTologin()">Back to login</a>
-						</div>
+					<div style="text-align: center; padding-top: 100px;" class="user-form-title">CHANGE YOUR PASSWORD</div>
+					<form class="user-login" action="index.php?module=common&action=passwc" method="POST">
 						
+						<input type="password" name="oldpassword" class="text-box" placeholder="Old password*" required="true">
+						<input type="password" name="newpassword" class="text-box" placeholder="New password*" required="true">
+						<input type="password" name="confirmnewpassword" class="text-box" placeholder="Confirm new password*" required="true">
+						<div style="display: flex;">
+							<button type="submit" name="signin" class="create-btn">CHANGE PASSWORD</button>
+							<a href="#backtosignin" onclick="backLink()">Back</a>
+						</div>
+							
 					</form>
 				</div>
 		</div>
-		<!-- ===================== Sidebar content (search bar) ====================== -->
+<!-- ===================== Sidebar content (search bar) ====================== -->
         <div id="searchBar" class="search-bar">
             <div class="overlay-content">
                 <form>
-                	  <input type="hidden" name="module" value="products">
-                	  <input type="hidden" name="action" value="calendar">
-                      <button><img src="../Images/Front/Icons/search.svg"></button>
+                	  <input type="hidden" name="module" value="<?php echo $module ?>">
+                	  <input type="hidden" name="module" value="<?php echo $action ?>">
+                      <button type="submit"><img src="../Images/Front/Icons/search.svg"></button>
                       <input type="text" placeholder="Search.." name="keyword">
                       <span class="closebtnsearch" onclick="closeSearch()" title="Close Overlay">×</span>
                 </form>
             </div>
         </div>
 
-
 <!-- ======================== Navigation bar ======================= -->		
-
-		<!-- ======================== Navigation bar ======================= -->		
 
 		<div class="header">
 			<div class="header-bg-image">
@@ -76,7 +64,7 @@
 
 						<!-- Dropdown megamenu -->
 				    <div class="dropdown">
-						    <button class="dropbtn"><a href="index.php?module=products&action=calen">Calendar</a></button>
+						    <button class="dropbtn"><a href="index.php?module=products&action=calendar">Calendar</a></button>
 						    <div class="dropdown-content">
 						    	<div class="mega-row">
 							        <div class="mega-col">
@@ -136,7 +124,7 @@
 							          	<a>LAMY</a>
 							        </div>
 							        <div class="mega-col">
-							          	<a href="index.php?module=products&action=bppen"><h3>Ballpoint Pen</h3></a>
+							          	<a href="index.php?module=products&action=bppen"><h3>Ball Point Pen</h3></a>
 							          	<a>Kaweco</a>
 							          	<a>LAMY</a>
 							          	<a>Moleskine</a>
@@ -160,7 +148,7 @@
   					<a class="open-search-btn" onclick="openSearch()" href="#facebook"><img src="../Images/Front/Icons/search.svg"></a>
 						<a href="index.php?module=contact&action=contact"><img src="../Images/Front/Icons/map-pin.svg"></a>
 						<!-- login sidebar -->
-						<a href="#facebook" onclick="openNav()"><img src="../Images/Front/Icons/user.svg"></a>
+						<a href="#facebook" onclick="openNavlogged()"><img src="../Images/Front/Icons/user.svg"></a>
 						<a href="index.php?module=orders&action=cart"><img src="../Images/Front/Icons/shopping-bag.svg"></a>
   					</div>
 				</div>

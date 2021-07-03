@@ -1,42 +1,37 @@
 <?php
-$title = 'Đổi Mật Khẩu';
-require_once('Layout/header.php');
 require_once ('Config/utility.php');	
 
 
-$id = $_SESSION['admin']['id'];
+$id = $_SESSION['user']['id'];
 $op = $np = $np2 = $gg = '';
 if(!empty($_POST)){
-	$gg = getPost('past');
+	$gg = getPost('oldpassword');
 	$op = getMD5Security($gg);
 
-	$np = getPost('new');
-	$np2 = getPost('new2');
+	$np = getPost('newpassword');
+	$np2 = getPost('confirmnewpassword');
     if($np == $np2){
-	$sql = "SELECT * FROM admin WHERE PASSWORD = '$op' AND ID = '$id'";
+	$sql = "SELECT * FROM customer WHERE PASSWORD = '$op' AND ID = '$id'";
 	$result = executeResult($sql, false);
 	if($result!=null && count($result)>0){
 		$nps = getMD5Security($np);
-		$sql = "UPDATE admin SET password = '$nps' WHERE id='$id'";
+		$sql = "UPDATE customer SET PASSWORD = '$nps' WHERE id='$id'";
 		execute($sql);
 		alert("Đổi mật khẩu thành công");
+		 echo "<h1 style='text-align: center;'>Đổi mật khẩu thành công!!!</h1></br>";
+    echo "<button class='btn-success' style='padding: 14px;margin-left:48%;text-align: center;'><a href='index.php'>Quay lại</a></button>";
+
 	}else{
-		alert("Sai mật khẩu hiện tại!!!");		
+		alert("Sai mật khẩu hiện tại!!!");
+ echo "<h1 style='text-align: center;'>Sai mật khẩu hiện tại!!!</h1></br>";
+    echo "<button class='btn-success' style='padding: 14px;margin-left:48%; text-align: center;'><a href='index.php'>Quay lại</a></button>";
 	}
 }else
 {
 	alert('Mật khẩu mới không trùng khớp!!!');
+ echo "<h1 style='text-align: center;'>Mật khẩu mới không trùng khớp!!!</h1></br>";
+    echo "<button class='btn-success' style='padding: 14px;margin-left:48%;text-align: center;'><a href='index.php'>Quay lại</a></button>";
+
 }
 }
 ?>
-<div class="container" style="width: 50%; margin-top: 20px;">
-<form class="form-group" method="POST">
-		<label for="past">Nhập mật khẩu hiện tại</label>
-		<input type="Password" name="past" required="true" class="form-control">
-		<label for="new">Nhập mật khẩu mới</label>
-		<input type="Password" name="new" required="true" class="form-control">
-		<label for="new2">Nhập lại mật khẩu mới</label>
-		<input type="Password" name="new2" required="true" class="form-control">
-		<button type="submit" class="btn-info form-control" style="margin-top: 30px;">Đổi mật khẩu</button>
-</form>
-</div>

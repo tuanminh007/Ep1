@@ -26,7 +26,7 @@
 			<div class="row">
 				<div class="footer1">
 					<h5>About Us</h5>
-					<p style="font-size: 14px;">Ryana Calendar is a collection of all things stationery and paper goods that we love, use, and care for. Deeply inspired by our trips to Japan and our affection for their craftsmanship and culture, we brought together designs for your desk and home from all over the globe that we hope will bring you joy and comfort while sparking your curiosity and creativity. </p>
+					<p style="font-size: 14px;">Ryana Calendar is a collection of all things stationery and paper goods that we love, use, and care for. Deeply inspired by our trips to Japan and our affection for their craftsmanship and culture, we brought together designs for your desk and home from all over the globe that we hope will bring you joy and comfort while sparking your curiosity and creativity.</p>
 					<div class="readmore">
 						<a style="text-decoration: none; font-family: mallory; font-size: 14px;" href="index.php?module=contact&action=about">Read more...</a>
 					</div>
@@ -44,10 +44,10 @@
 					<h5>Follow Us</h5>
 					<p style="font-size: 14px;">Keep up with our latest news through social media!</p>
 					<div class="social">
-						<a href="https://www.instagram.com/ryanacalendars/><img src="../Images/Front/Icons/facebook.svg"></a>
-						<a href="https://www.instagram.com/ryanacalendars/><img src="../Images/Front/Icons/instagram.svg"></a>
-						<a href="https://www.instagram.com/ryanacalendars/><img src="../Images/Front/Icons/twitter.svg"></a>
-						<a href="https://www.instagram.com/ryanacalendars/><img src="../Images/Front/Icons/pinterest.svg"></a>
+						<a href="https://www.instagram.com/ryanacalendars/"><img src="../Images/Front/Icons/facebook.svg"></a>
+						<a href="https://www.instagram.com/ryanacalendars/"><img src="../Images/Front/Icons/instagram.svg"></a>
+						<a href="https://www.instagram.com/ryanacalendars/"><img src="../Images/Front/Icons/twitter.svg"></a>
+						<a href="https://www.instagram.com/ryanacalendars/"><img src="../Images/Front/Icons/pinterest.svg"></a>
 					</div>
 				</div>
 				<div class="footer4">
@@ -62,9 +62,8 @@
 			</div>
 		</div>
 
-
-<!-- =============== navigation bar reveal on scroll ============== -->
-    <script type="text/javascript">
+<!-- =============== element reveal on scroll ============== -->
+<script type="text/javascript">
     window.addEventListener('scroll', reveal);
 
     function reveal(){
@@ -87,8 +86,8 @@
     </script>
 
 
-<!-- ========== open navbar to login form ============ -->
-    <script>
+<!-- =============== navigation bar reveal on scroll ============== -->
+   <script>
 		function openNav() {
 		  document.getElementById("mySidenav").style.width = "400px";
 		}

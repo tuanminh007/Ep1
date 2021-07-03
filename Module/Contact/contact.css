@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@font-face {
+  src: url(Config/mallory-light.ttf);
+  font-family: mallory;
+}
+
+*{
+	font-family: "mallory";
+	/*box-sizing: border-box;*/
+}
+
+body{
+	min-height: 100vh;
+	/*background-color: #a3d2c0;*/
+	background-color: #f7f7f7;
+	background-repeat: no-repeat;
+	background-size: 1500px;
+	/*display: flex;*/
+	justify-content: center;
+	align-items: center;
+
+}
+
+.contact-section{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 100px;
+}
+
+.contact-information{
+	color: black;
+	max-width: 500px;
+	line-height: 50px;
+	padding-left: 50px;
+	font-size: 18px;
+}
+
+.contact-information i{
+	margin-right: 20px;
+	font-size: 25px;
+	color: black;
+
+}
+
+.contact-form{
+	max-width: 700px;
+	margin-right: 50px;
+}
+
+.contact-information, .contact-form{
+	flex: 1;
+}
+
+.contact-form h2{
+	color: black;
+	text-align: center;
+	font-size: 35px;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+}
+
+.contact-form .text-box{
+	background: #000;
+	color: #fff;
+	border: none;
+	width: calc(50%-10px);
+	height: 50px;
+	padding: 12px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	box-shadow: transparent;
+	opacity: 0.9;
+}
+
+.contact-form .text-box:first-child{
+	margin-right: 35%;
+}
+
+.contact-form textarea{
+	background: #000;
+	color: #fff;
+	border: none;
+	width: 100%;
+	padding: 12px;
+	font-size: 15px;
+	min-height: 200px;
+	max-height: 400px;
+	resize: vertical;
+	border-radius: 5px;
+	box-shadow: transparent;
+	margin-bottom: 20px;
+	opacity: 0.9;
+}
+
+.contact-form .send-btn{
+	float: right;
+	background: #345beb;
+	color: #fff;
+	border: none;
+	width: 120px;
+	height: 40px;
+	font-size: 15px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.contact-information a {
+	text-decoration: none;
+	color: black;
+}
+
+.contact-form .send-btn:hover{
+	background: #5c82bf;
+}
+
+.alert-success {
+	z-index: 1;
+	background: #34c427;
+	font-size: 18px;
+	padding: 20px 40px;
+	min-width: 420px;
+	position: fixed;
+	right: 0;
+	top: 10px;
+	border-radius: 4px;
+}
+
+.alert-error{
+	z-index: 1;
+	background: #ad233e;
+	font-size: 18px;
+	padding: 20px 40px;
+	min-width: 420px;
+	position: fixed;
+	right: 0;
+	top: 10px;
+	border-radius: 4px;
+}
+
+
+/*   ============ google map ============    */
+
+.googleMap {
+	margin-left: 500px;
+}

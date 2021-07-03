@@ -1,0 +1,1364 @@
+/* Add font family */
+@font-face {
+  src: url(Config/mallory-light.ttf) format("truetype");
+  font-family: mallory;
+}
+@font-face {
+  src: url(Config/mallory-book.ttf) format("truetype");
+  font-family: mallory-book;
+}
+@font-face {
+  font-family: mallory;
+  src: url(Config/mallory-medium.ttf) format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Website margin*/
+body {
+  margin: 0px;
+  background-color: #F7F7F7;
+}
+
+/* ============== navigation bar ============*/
+
+
+.header-bg-image {
+  /* The image used */
+  background-image: url('../Images/Front/Thumbnail/bannerpic.jpg');
+  width: 1519.2px;
+  min-height: 800px;
+  /*object-fit: cover;
+  object-position: 50% 800%;*/
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  /* Needed to position the navbar */
+  position: relative;
+}
+
+/* Position the navbar container inside the image */
+.header-container {
+  /*position: absolute;*/
+  margin: 0px;
+  width: auto;
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  transition: 1s;
+}
+
+.header-container-solid {
+  /*position: absolute;*/
+  margin: 0px;
+  width: auto;
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  transition: 1s;
+  background-color: #ffffff;
+}
+
+
+.header-container .header-left {
+  width: 20%;
+}
+
+.header-container-solid .header-left {
+  width: 20%;
+}
+
+.header-left {
+  padding-left: 40px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+.header-container .navbar {
+  width: 60%;
+}
+
+.header-container-solid .navbar {
+  width: 60%;
+}
+
+.navbar {
+  padding-top: 15px;
+  padding-left: 250px;
+  /*  padding-right: 250px;*/
+}
+
+.header-container .header-right {
+  width: 20%;
+}
+
+.header-container-solid .header-right {
+  width: 20%;
+}
+
+.header-right {
+  padding-top: 28px;
+  float: right;
+}
+
+.header-right a {
+  padding-right: 20px;
+}
+
+/* Navbar fontfamily */
+/* The navbar */
+.navbar {
+  overflow: hidden;
+  background-color: transparent;
+  font-family: mallory;
+  /*font-weight: 50;*/
+}
+
+
+.logo {
+  width: 120%;
+  padding-top: 5px;
+}
+
+
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 30px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/*.navbar a:hover {
+  background-color: white;
+  color: black;
+}*/
+
+.left-col-img {
+  width: 400px;
+  height: 400px;
+
+}
+
+.right-col-img {
+  width: 400px;
+  height: 400px;
+}
+
+h2 {
+  font-family: mallory;
+  font-size: 40px;
+  font-weight: normal;
+}
+
+p {
+  font-family: mallory;
+  font-size: 18px;
+}
+
+/* =====================================mega menu ====================================== */
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropbtn {
+  color: #2a6464;
+
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  width: 100%;
+  left: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+
+}
+
+/* Create three equal columns that floats next to each other */
+.mega-col {
+  float: left;
+  width: 20%;
+  padding-left: 30px;
+  padding-top: 10px;
+  background-color: #ffffff;
+  height: 250px;
+}
+
+.mega-col a {
+  float: none;
+  color: black;
+  padding: 8px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.mega-col a:hover {
+  cursor: context-menu;
+  color: #000;
+}
+
+.mega-col h3 {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 13px;
+}
+
+.mega-col h3:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #2a6464;
+}
+
+/* Clear floats after the columns */
+.mega-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*ảnh tren megamenu */
+.mega-img {
+  width: 200px;
+  height: 200px;
+  padding-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/* ============= Landing page sections ============== */
+.section-1 {
+  display: flex;
+  /*flex-wrap: wrap;   (this has something to do with seperating them in the same line)*/
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.section-1-left-col {
+  flex: 50%; /* Set the width of the sidebar */
+  background-color: #F7F7F7; /* Grey background color */
+  padding: 20px; /* Some padding */
+  padding-top: 100px;
+  text-align: center;
+}
+
+/* Main column */
+.section-1-right-col {
+  flex: 50%; /* Set the width of the main content */
+  background-color: #F7F7F7; /* White background color */
+  padding: 20px; /* Some padding */
+  padding-top: 100px;
+  text-align: center;
+}
+
+
+/* Column container */
+.section-2 {
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.left-img {
+  flex: 50%; /* Set the width of the sidebar */
+  height: 500px;
+  width: 750px;
+}
+
+/* Main column */
+.right-img {
+  flex: 50%; /* Set the width of the main content */
+  padding-left: 10px;
+  width: 720px;
+  height: 500px;
+}
+
+/*=============== contact us ===============*/
+
+
+
+/* Column container */
+.row {
+  display: flex;
+  font-family: mallory;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.footer1 {
+  flex: 30%; /* Set the width of the sidebar */
+  padding-left: 100px;
+}
+
+/* Main column */
+.footer2 {
+  flex: 15%; /* Set the width of the main content */
+  padding-left: 60px;
+}
+
+.footer3 {
+  flex: 15%; /* Set the width of the sidebar */
+  padding-left: 30px;
+}
+
+/* Main column */
+.footer4 {
+  flex: 25%; /* Set the width of the main content */
+  padding-left: 30px;
+}
+
+.copyright {
+  padding-left: 100px;
+  font-size: 14px;
+}
+
+
+
+/*========== footer =========*/
+
+
+.footershop a {
+  text-decoration: none;
+  color: black;
+  font-family: mallory;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.row h5 {
+  font-size: 16px;
+  font-family: mallory;
+  font-weight: 400;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.social a {
+  padding-right: 24px;
+}
+
+/* ==================Calendar Shopping===================*/
+.section-3 {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  padding-bottom: 0;
+}
+
+.section-3 img {
+  width: 100%;
+  height: auto;
+}
+
+.section-3 .contact-btn {
+  position: absolute;
+  top: 120px;
+  left: 1200px;
+  /*transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);*/
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 20px 24px;
+  border: solid darkgray 1px;
+  cursor: pointer;
+  text-align: center;
+  font-family: mallory;
+  text-transform: uppercase;
+}
+
+.section-3 .contact-btn:hover {
+  position: absolute;
+  top: 120px;
+  left: 1200px;
+  /*transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);*/
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 20px 24px;
+  border: solid rgb(0, 0, 0) 1px;
+  cursor: pointer;
+  text-align: center;
+  font-family: mallory;
+  text-transform: uppercase;
+}
+
+/* ======= WHY SHOP WITH US ====== */
+.section-4 {
+  background-color: black;
+  padding-top: 0;
+  padding-bottom: 20px;
+  color: white;
+}
+
+.section-4-title {
+  font-family: mallory;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 40px;
+  line-height: 17px;
+}
+
+.section-4-row {
+  display: flex;
+  padding: 50px;
+}
+
+.section-4-col {
+  flex: 20%;
+  text-align: center;
+}
+
+.section-4-col img {
+  width: 30px;
+}
+
+.section-4-col p {
+  line-height: 16px;
+  font-weight: bold; 
+  font-size: 14px;
+}
+
+
+
+/*===============Product display detail ================*/
+.product-card {
+  background-color: white;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  height: 420px;
+  margin: 0px;
+  text-align: left;
+  font-family: mallory;
+  padding-left: 35px;
+  padding-right: 35px;
+  position: relative;
+}
+
+.product-card a {
+  text-decoration: none;
+}
+
+.price {
+  color: #747474;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  position: absolute;
+  bottom: 20px;
+}
+
+.product-brand {
+  text-transform: uppercase;
+  color: #999999;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 12px;
+}
+
+.calendar-designer {
+  text-transform: uppercase;
+  color: #999999;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 12px;
+}
+
+.product-name {
+  font-family: mallory;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: black;
+}
+
+.product-card button {
+  border: none;
+  outline: 0;
+  padding: 5px;
+  color: white;
+  background-color: #000;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.product-card button:hover {
+  opacity: 0.7;
+}
+
+.product-row {
+  display: flex;
+  font-family: mallory;
+  padding-top: 40px;
+  /*padding-bottom: 30px;*/
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.product1 {
+  flex: 10%; 
+  
+  padding-left: 9px;
+}
+
+
+.product2 {
+  flex: 10%; 
+   
+  padding-left: 9px;
+}
+
+.product3 {
+  flex: 10%; 
+  
+  padding-left: 9px;
+}
+
+
+.product4 {
+  flex: 10%;
+  
+  padding-left: 9px;
+}
+td{
+  width: 320px;
+}
+
+.product1:hover{
+ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.product2:hover{
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.product3:hover{
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.product4:hover{
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.product-link {
+  text-decoration: none;
+}
+
+
+/* ============ Diaries  Planners Intro =========== */
+
+.intro-container {
+  display: flex;
+}
+
+.intro-container .intro-left {
+  width: 50%;
+  float: left;
+
+}
+
+.intro-container .intro-right {
+  width: 50%;
+  float: right;
+}
+
+.intro-content {
+  font-family: mallory;
+  padding-top: 140px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.intro-right img {
+  width: 759.6px;
+  height: 370px;
+  object-fit: cover;
+}
+
+.intro-left {
+  color: white;
+  height: 370px;
+}
+
+
+/*======== product detail ==========*/
+.product-information {
+  padding-top: 85px;
+  display: flex;
+  background-color: #ffffff;
+}
+
+.detail-view {
+  flex: 70%;
+
+}
+
+.detail-view img {
+  width: 400px;
+  height: 400px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  margin-left: 400px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.product-detail {
+  flex: 30%;
+  padding-top: 100px;
+}
+
+.product-detail .product-brand {
+  font-family: mallory;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 12px;
+  padding-bottom: 10px;
+  color: #777777;
+}
+
+.product-detail .product-name {
+  font-family: mallory;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 22px;
+  padding-bottom: 20px;
+}
+
+.product-detail .product-detail-price {
+  font-family: mallory;
+  font-size: 23px;
+  font-weight: 400px;
+  line-height: 29px;
+}
+
+.product-quantity {
+  display: flex;
+  height: 36px;
+  width: 150px;
+  border-color: #DCD9D7;
+  border-width: 0 0 2px 0;
+  padding-bottom: 8px;
+  padding-top: 20px;
+  border-bottom: solid #aaaaaa 1px;
+}
+
+.product-quantity input {
+  border: none;
+  text-align: center;
+  width: 100px;
+  font-size: 15px;
+  font-family: mallory;
+}
+
+.product-quantity a {
+  padding-top: 8px;
+}
+
+.addbag-btn {
+  margin-top: 40px;
+  border: none;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: mallory;
+  font-size: 15px;
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+
+.product-information-2 {
+    padding: 0px 300px 0px 300px;
+}
+.product-guarantee {
+  padding-top: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  font-family: mallory;
+  border-bottom: solid #e5e5de 0.5px;
+  margin-right: 250px;
+}
+
+.product-guarantee img {
+  padding-right: 20px;
+  margin-top: 10px;
+}
+
+
+.detail-name {
+  text-align: center;
+  font-family: mallory;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 22px;
+  padding-top: 70px;
+}
+
+.detail-col-1 {
+  flex: 50%;
+  padding: 30px 70px 70px 70px;
+}
+
+/*.detail-col-2 {
+  flex: 50%;
+  padding: 30px 70px 70px 70px;
+}*/
+
+.detail-col-1 p {
+  font-family: mallory;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+
+}
+
+.detail-col-2 h3 {
+  font-family: mallory;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.detail-col-2 p {
+  font-family: mallory;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+/* ============ Check out page ============== */
+
+.checkout-page-container {
+  padding-top: 30px;
+}
+
+.shopping-bag-page-title {
+  font-family: mallory;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26px;
+  padding-left: 140px;
+}
+
+.checkout-container {
+  display: flex;
+  padding-top: 10px;
+  padding-left: 140px;
+  padding-bottom: 120px;
+}
+
+.shopping-bag-container {
+  flex: 55%;
+  background-color: #ffffff;
+}
+
+.checkout-section {
+  flex: 45%;
+}
+
+.shopping-bag-title {
+  display: flex;
+  font-family: mallory;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 12px;
+  color: #212323;
+}
+
+.shopping-bag-title {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #EFEDEB;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.bag-title-1 {
+  flex: 60%;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.bag-title-2, .bag-title-3 {
+  flex: 20%;
+  font-weight: bold;
+}
+
+.shopping-bag-row {
+  display: flex;
+  border-bottom: 1px solid #EFEDEB;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.shopping-bag-image {
+  flex: 13%;
+}
+
+.shopping-bag-name {
+  flex: 35%;
+}
+
+.shopping-bag-price {
+  flex: 18%;
+  font-family: mallory;  
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #747474;
+  text-align: center;
+}
+
+.shopping-bag-quantity {
+  flex: 3%;
+  font-family: mallory;  
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #747474;
+}
+
+.shopping-bag-name .product-brand {
+  font-family: mallory;
+}
+
+.shopping-bag-name, .shopping-bag-price, .shopping-bag-quantity {
+  padding-top: 30px;
+}
+
+
+.shopping-bag-image img {
+  width: 100px;
+  height: 100px;
+}
+
+.shopping-bag-delete {
+  cursor: pointer;
+  padding-bottom: 29px;
+}
+
+
+.checkout-option-img {
+  width: 60px;
+  height: 60px;
+}
+
+.checkout-title {
+  font-family: mallory;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 16px;
+  padding: 30px 30px 0px 30px;
+}
+
+.checkout-subtitle {
+  font-family: mallory;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 30px;
+}
+
+.checkout-section-container {
+  background-color: #ffffff;
+  margin-left: 90px;
+  margin-right: 120px;
+}
+
+.checkout-section-container a {
+  padding-left: 6px;
+  margin-right: 50px;
+}
+
+.checkout-total {
+  display: flex;
+  font-size: 15px;
+  font-family: mallory;
+  padding: 30px;
+}
+
+.checkout-total-title {
+  flex: 75%;
+  float: left;
+  font-weight: bold;
+}
+
+.checkout-total-value {
+  flex: 25%;
+  float: right;
+}
+
+.checkout-checkbox {
+  padding: 20px 30px 10px 30px;
+}
+
+.checkout-option {
+  display: flex;
+  border: 1px solid #EFEDEB;
+  margin-bottom: 10px;
+}
+
+.checkout-option input {
+  flex: 50%;
+  margin-right: 120px;
+  margin-top: 25px;
+}
+
+.checkout-option label {
+  flex: 50%;
+  margin-left: 50px;
+}
+
+.input-radio {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.checkout-btn {
+  border: none;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: mallory;
+  font-size: 16px;
+  padding: 13px 120px;
+  margin: 20px 30px 40px 30px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.checkout-checkbox textarea {
+  width: 300px;
+}
+
+/* ============ javascript =========== */
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+
+
+.reveal.active{
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+
+/*================= Contact GeoLocation ================*/
+
+
+/*================= Sidebar Format ==================*/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 11;
+  top: 0;
+  right: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+
+/*.sidenav a:hover {
+  color: #f1f1f1;
+}*/
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 30px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 45px;
+  text-decoration: none;
+  color: black;
+}
+
+.user-form-title {
+  font-family: mallory;
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.user-form-container {
+  padding-left: 40px;
+  padding-right: 20px;
+}
+
+
+
+form {
+/*  display:  flex; 
+  flex-direction:  column;*/
+  align-items:  flex-start; 
+  padding-bottom:  50px; 
+}
+
+.sidenav input {
+  font-size:  16px; 
+/*  padding:  20px 0px;*/ 
+  height:  56px; 
+  border:  none; 
+  border-bottom: solid 1px; 
+  background:  #fff; 
+  min-width:  350px; 
+  box-sizing:  border-box; 
+  transition:  all .3s linear; 
+  font-weight:  400; 
+  font-family: mallory;
+}
+
+
+::placeholder {
+  font-family: mallory;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: solid gray 1px;
+}
+
+.signin-btn {
+  border: none;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: mallory;
+  font-size: 15px;
+  padding: 12px 21px;
+}
+
+.suggest-btn {
+  width: 350px;
+  border: solid darkgray 1px;
+  background-color: #f7f7f7;
+  color: black;
+  text-align: center;
+  font-family: mallory;
+  font-size: 15px;
+  padding: 12px 20px;
+}
+
+.create-btn {
+  border: none;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: mallory;
+  font-size: 15px;
+  padding: 12px 21px;
+}
+
+.signin-btn {
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.suggest-btn {
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+.create-btn {
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.suggest-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+form a {
+  font-family: mallory;
+  color: darkgrey;
+  font-size: 14px;
+  padding-top: 40px;
+  padding-left: 40px;
+}
+
+/* ======= user info display when logged in ======= */
+
+
+.change-password-link {
+  font-family: mallory;
+  color: #747474;
+  font-size: 14px;
+  padding-top: 40px;
+  padding-left: 70px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.logout-btn {
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.logout-btn:hover, .logout-btn a:hover {
+  background-color: black;
+  color: white;
+}
+
+.logout-btn {
+  border: solid darkgray 1px;
+  background-color: #f7f7f7;
+  color: black;
+  text-align: center;
+  font-family: mallory;
+  font-size: 15px;
+  padding: 12px 30px;
+}
+
+.logout-btn a {
+  text-decoration: none;
+  color: #000;
+}
+
+
+/* ============ spacing top from the navbar (all) ============ */
+.main-content {
+  padding-top: 85px;
+}
+
+.product {
+  padding-top: 85px;
+}
+
+.intro-container {
+  padding-top: 85px;
+  margin-bottom: 50px;
+}
+
+
+/* =============== Sidebar (search box) ============== */
+.open-search-btn {
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.search-bar {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 12;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.5);
+}
+
+.overlay-content {
+  position: relative;
+  top: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.overlay-content form {
+  display: flex;
+}
+
+.search-bar .closebtnsearch {
+  top: 10px;
+  right: 45px;
+  font-size: 48px;
+  cursor: pointer;
+  color: black;
+  background-color: #ffffff;
+  flex: 10%;
+}
+
+
+.search-bar input[type=text] {
+  padding: 17.5px;
+  font-size: 17px;
+  border: none;
+  width: 60%;
+  background: #ffffff;
+  flex: 50%;
+}
+
+
+.search-bar button {
+  width: 20%;
+  padding: 13px;
+  background: #ffffff;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  flex: 40%;
+  padding-left: 420px;
+}
+
+
+
+
+
+/* ============= search result ============= */
+.result-title {
+  font-family: mallory;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  text-align: center;
+  display: flex;
+  text-transform: uppercase;
+}
+
+.result-container {
+  padding-top: 150px;
+  padding-left: 630px;
+}
+
+hr {
+  margin-top: 40px;
+  color: #e5e5de;
+}
+.contact-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 170px;
+}
+
+.contact-form{
+    width: 880px;
+    background-color: #ffffff;
+}
+
+.contact-form form {
+    padding: 30px 80px 40px 80px;
+}
+
+
+.contact-form h2{
+    color: black;
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.contact-form p {
+    font-family: mallory;
+    font-size: 15px;
+    font-weight: 350;
+    line-height: 22px;
+    color: #212323;
+    padding: 30px 80px 10px 80px;
+}
+
+.contact-form input {
+    font-size:  16px;
+  height:  56px; 
+  border:  none; 
+  border-bottom: solid 1px; 
+  background:  #fff; 
+  width: 650px; 
+  box-sizing:  border-box; 
+  font-weight:  400; 
+  font-family: mallory;
+}
+
+
+.contact-form textarea{
+    font-size:  16px; 
+  height:  56px; 
+  border:  none; 
+  border-bottom: solid 1px; 
+  background:  #fff; 
+  min-width:  650px; 
+  box-sizing:  border-box; 
+  font-weight:  400; 
+  font-family: mallory;
+  padding-top: 15px;
+}
+
+.contact-form .contact-submit-btn{
+    border: none;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: mallory;
+  font-size: 15px;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.location-title {
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 26px;
+    font-family: mallory;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
